@@ -1,25 +1,8 @@
 # Differential power analysis of a DES crypto-processor
 
-
-
-## Table of content
-* [General description](#general-description)
-* [Some useful material](#some-useful-material)
-* [Directions](#directions)
-    * [Select your preferred programming language](#select-your-preferred-programming-language)
-    * [Build all executables](#build-all-executables)
-    * [Acquisitions](#acquisitions)
-    * [Example attack program](#example-attack-program)
-    * [Attack phase](#attack-phase)
-* [Evaluation](#evaluation)
-    * [Checking your work](#checking-your-work)
-    * [Submitting your work](#submitting-your-work)
-    * [The hall of fame](#the-hall-of-fame)
-
 ## General description
 
-This folder contains code which retrieve a DES last round key from a set of power traces. The target implementation is the hardware DES crypto-processor which architecture is depicted in the following figure:
-
+This folder contains code which retrieve a DES last round key from a set of power traces. The target implementation is the hardware DES crypto-processor which architecture is depicted in the following figure: 
 ![DES architecture]
 
 As can be seen from the DES architecture a full encryption takes 32 cycles (in our case the secret key is input once and then never changes):
@@ -35,23 +18,6 @@ Using this architecture, 10000 different 64 bits messages were encrypted with th
 Each power trace should be recorded several times and averaged in order to increase the voltage resolution.
 for the purpose of this lab, a data simulator generates these traces as well as input plain texts and the produced cipher texts.
 The sampling frequency for the samples is 20 Gs/s, but the power traces have been down-sampled by a factor of 25. Despite this quality loss it is indeed still perfectly feasible to recover the secret key. And because the traces only contain 800 points each (32 clock periods times 25 points per clock period), the attack runs much faster than with the original time resolution (20000 points per power trace). 
-
-## references
-
-* The [DES standard]
-* [Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)]
-* The [introduction lecture]
-* The [lecture on side channel attacks]
-* For the C language version:
-    * [The **des** library, dedicated to the Data Encryption Standard (DES)][DES C library]
-    * [The **traces** library, dedicated to power traces manipulations][traces C library]
-    * [The **tr\_pcc** library, dedicated to the computation of Pearson Correlation Coefficients (PCC) between power traces and scalar random variables][tr_pcc C library]
-    * [The **km** library, to manage the partial knowledge about a DES (Data Encryption Standard) secret key][km C library]
-* For the python language version:
-    * [The **des** library, dedicated to the Data Encryption Standard (DES)][DES python library]
-    * [The **traces** library, dedicated to power traces manipulations][traces python library]
-    * [The **tr\_pcc** library, dedicated to the computation of Pearson Correlation Coefficients (PCC) between power traces and scalar random variables][tr_pcc python library]
-    * [The **km** library, to manage the partial knowledge about a DES (Data Encryption Standard) secret key][km python library]
 
 
 ### Acquisitions
@@ -105,7 +71,7 @@ All printed messages are sent to the standard error (`stderr`) or one of the out
 
 Run the example program on the whole set of acquisitions:
 ```bash
-$ ./pa pa.hws 10000 # or ./pa.py pa.hws 10000
+$  ./pa.py pa.hws 10000
 Average power trace stored in file 'average.dat'. In order to plot it, type:
 $ gnuplot -persist average.cmd
 Target bit: 1
@@ -134,13 +100,13 @@ The red trace is the one with the highest peak, the one corresponding to the fou
 Try to understand this example program and play with it. Note that it optionally takes a third parameter to specify the index of the target bit in `L15` (1 to 32, as in the DES standard, default: 1). So, running:
 
 ```bash
-$ ./pa pa.hws 10000 # or ./pa.py pa.hws 10000
+$  ./pa.py pa.hws 10000
 ```
 
 is just like running:
 
 ```bash
-$ ./pa pa.hws 10000 1 # or ./pa.py pa.hws 10000 1
+$ ./pa.py pa.hws 10000 1
 ```
 
 Here is an example of what you could try to do with this third optional parameter: use the provided DPA program example 32 times on the 32 different target bits. Have a look at some DPA traces with `gnuplot`, if you wish. For each of the 32 acquisitions fill a line in the [provided table]. Note: the line corresponding to the example above is already filled.
@@ -148,20 +114,15 @@ Here is an example of what you could try to do with this third optional paramete
 Remark:  it takes some time to run all these 32 experiments (especially in python).
 
 
-For verification, we can check that the printed 48-bits last round key is the same as in `pa.key`.
+Fverification, we can check that the printed 48-bits last round key is the same as in `pa.key`.
 
 
 ## references
-[initial setup]: https://gitlab.eurecom.fr/renaud.pacalet/hwsec#gitlab-and-git-set-up
-[DES standard]: ./des.pdf
-[A power trace]: ../doc/trace.png
-[provided table]: ../doc/des_pa_table.pdf
-[DES architecture]: ../doc/des_architecture.png
-[Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)]: https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf
-[DES python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/des.html
-[traces python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/traces.html
-[tr_pcc python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/tr_pcc.html
-[km python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html
+[1] Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun): https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf \
+[2] DES python library: http://soc.eurecom.fr/HWSec/doc/pa/python/des.html \
+[3] traces python library: http://soc.eurecom.fr/HWSec/doc/pa/python/traces.html \
+[4] tr_pcc python library: http://soc.eurecom.fr/HWSec/doc/pa/python/tr_pcc.html \
+[5] km python library: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html
 
 
 <!-- vim: set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab textwidth=0: -->
