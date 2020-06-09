@@ -114,7 +114,7 @@ Here is an example of what you could try to do with this third optional paramete
 Remark:  it takes some time to run all these 32 experiments (especially in python).
 
 
-Fverification, we can check that the printed 48-bits last round key is the same as in `pa.key`.
+For verification, we can check that the printed 48-bits last round key is the same as in `pa.key`.
 
 
 ## references
@@ -122,7 +122,11 @@ Fverification, we can check that the printed 48-bits last round key is the same 
 [2] DES python library: http://soc.eurecom.fr/HWSec/doc/pa/python/des.html \
 [3] traces python library: http://soc.eurecom.fr/HWSec/doc/pa/python/traces.html \
 [4] tr_pcc python library: http://soc.eurecom.fr/HWSec/doc/pa/python/tr_pcc.html \
-[5] km python library: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html
+[5] km python library: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html \
 
+[A power trace]: ../doc/trace.png
 
+[DES architecture]: ../doc/des_architecture.png
+
+[provided table]: ../doc/des_pa_table.pdf
 <!-- vim: set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab textwidth=0: -->
