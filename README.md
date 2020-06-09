@@ -3,9 +3,9 @@ This repository contains my implentation for two side channel attacks as describ
 This work was part of my Hardware security course, I took at Eurecom During the spring semester 2019.
 Professor Renaud Pacalet supervised this work and provided the initial setup, cryptographic software libraries and the data generator needed to accomplish this project.
 
-#attacks 
-* The [timing attack ]
-* The [power attack ]
+# Attacks 
+* The [timing attack ]: ./timingAttack
+* The [power attack ]:  ./powerAttack
 
 
 ### Programming languages
