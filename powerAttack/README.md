@@ -118,15 +118,21 @@ For verification, we can check that the printed 48-bits last round key is the sa
 
 
 ## references
-[1] Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun): https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf \
-[2] DES python library: http://soc.eurecom.fr/HWSec/doc/pa/python/des.html \
-[3] traces python library: http://soc.eurecom.fr/HWSec/doc/pa/python/traces.html \
-[4] tr_pcc python library: http://soc.eurecom.fr/HWSec/doc/pa/python/tr_pcc.html \
-[5] km python library: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html \
+[1] [Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)] \
+[2] [DES python library] \
+[3] [traces python library] \
+[4] [tr_pcc python library] \
+[5] [km python library] 
 
 [A power trace]: ../doc/trace.png
 
 [DES architecture]: ../doc/des_architecture.png
 
 [provided table]: ../doc/des_pa_table.pdf
+[Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)]: https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf 
+
+[DES python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/des.html 
+[traces python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/traces.html 
+[tr_pcc python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/tr_pcc.html 
+[km python library]: http://soc.eurecom.fr/HWSec/doc/pa/python/km.html 
 <!-- vim: set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab textwidth=0: -->
