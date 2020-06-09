@@ -36,15 +36,6 @@ p_permutation(val) {
 
 
 
-## references
-
-* The [DES standard]
-* [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)]
-* For the C language version:
-    * [The **des** library, dedicated to the Data Encryption Standard (DES)][DES C library]
-    * [The **pcc** library, dedicated to the computation of Pearson Correlation Coefficients (PCC)][pcc C library]
-    * [The **km** library, to manage the partial knowledge about a DES (Data Encryption Standard) secret key][km C library]
-
 ## Directions
 
 
@@ -140,8 +131,18 @@ $ ./ta_acquisition 100000
 This will first check the functional correctness of the modified DES implementation. Fix the errors if any until the application runs fine and creates a new `ta.dat` file containing 100000 acquisitions. Try to attack with these acquisitions and see whether it still works... Do you think your implementation is really protected against timing attacks? Explain. If you are not convinced that your implementation is 100% safe, explain what we could do to improve it.
 
 
-```
+## references
 
+* The [DES standard]
+* [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)]
+* For the C language version:
+    * [The **des** library, dedicated to the Data Encryption Standard (DES)][DES C library]
+    * [The **pcc** library, dedicated to the computation of Pearson Correlation Coefficients (PCC)][pcc C library]
+    * [The **km** library, to manage the partial knowledge about a DES (Data Encryption Standard) secret key][km C library]
+
+[DES C library]: http://soc.eurecom.fr/HWSec/doc/ta/C/des_8h.html
+[pcc C library]: http://soc.eurecom.fr/HWSec/doc/ta/C/pcc_8h.html
+[km C library]: http://soc.eurecom.fr/HWSec/doc/ta/C/km_8h.html 
 [initial setup]: https://gitlab.eurecom.fr/renaud.pacalet/hwsec#gitlab-and-git-set-up
 [DES standard]: ../doc/des.pdf
 [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)]: http://www.cryptography.com/resources/whitepapers/TimingAttacks.pdf
