@@ -13,12 +13,12 @@ Professor Renaud Pacalet supervised this work and provided the initial setup, cr
 
 
 ## references 
-[1] [Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)]
-[2] [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)]
-[3] [DES standard] 
-[4] [Hardware security course website]
+[1] [Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun] \
+[2] [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)] \
+[3] [DES standard] \
+[4] [Hardware security course website] \
 
-[Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun)]: https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf 
+[Differential Power Analysis (Paul Kocher, Joshua Jaffe, and Benjamin Jun]: https://42xtjqm0qj0382ac91ye9exr-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/DPA.pdf 
 
 [Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems (Paul Kocher, CRYPTO'96)]: http://www.cryptography.com/resources/whitepapers/TimingAttacks.pdf 
 [DES standard]: /doc/des.pdf 
